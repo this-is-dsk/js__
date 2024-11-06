@@ -1,0 +1,1 @@
+// we use iifi for removing the global scope pollution and execute the function emmediately
