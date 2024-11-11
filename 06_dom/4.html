@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body style="background-color: black;color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+    <script>
+        function addLanguage(langName) {
+            const li = document.createElement("li");
+            li.innerHTML = `${langName}`;
+            document.querySelector(".language").appendChild(li);
+        }
+
+        addLanguage("Python");
+        addLanguage("Dart");
+        addLanguage("Ruby");
+
+        function addOptiLanguage(langName) {
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode(langName));
+            document.querySelector(".language").appendChild(li);
+        }
+        addOptiLanguage("Java");
+
+        // EDIT
+
+        const newlang = document.querySelector("li:nth-child(4)");
+        newlang.innerHTML = "c++";
+
+        // Remove
+
+        const removeLi = document.querySelector("li:nth-child(2)")
+        removeLi.remove();
+    </script>
+</body>
+</html>
