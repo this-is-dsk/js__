@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: black; color: white;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img id="bike" width="200px" src="https://images.pexels.com/photos/2393835/pexels-photo-2393835.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop"></li>
+            <li><img id="river" width="200px" src="https://images.pexels.com/photos/2438/nature-forest-waves-trees.jpg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+            <li><img id="bird" width="200px" src="https://images.pexels.com/photos/326900/pexels-photo-326900.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+            <li><img id="camera" width="200px" src="https://images.pexels.com/photos/2179865/pexels-photo-2179865.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+            <li><img id="food" width="200px" src="https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+            <li><a style="color: white;" href="https://www.google.com/" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    document.getElementById('camera').onclick = function(){
+        alert('camera clicked');
+    }
+
+    document.getElementById('camera').addEventListener('click', function(){
+        alert("camera clicked again")
+    })
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+    })
+
+    document.getElementById('images').addEventListener('click', function(e){
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+    })
+
+</script>
+</html>
